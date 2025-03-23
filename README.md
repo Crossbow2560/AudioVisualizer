@@ -11,4 +11,14 @@ An Audio Visualizer using python and arduino
 - Arduino GND -> WS2812B GND
 - Arduino D6 -> WS2812B DataPin
 
+## Libraries
+### Python
+- numpy
+- sounddevice
+- serial
+
+### Arduino
+- FastLED
+- 
+
   
