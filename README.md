@@ -19,6 +19,5 @@ An Audio Visualizer using python and arduino
 
 ### Arduino
 - FastLED
-- 
 
   
