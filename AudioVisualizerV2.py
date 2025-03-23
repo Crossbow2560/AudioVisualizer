@@ -19,7 +19,7 @@ FREQ_BANDS = [(60, 150), (250, 500), (800, 1200), (2000, 3000), (6000, 10000)]
 LOW_AMP = 4.0  # For first three bands (Bass, Low-Mid, Mid)
 HIGH_AMP = 8.0  # For High-Mid band
 EXTRA_HIGH_AMP = 12.0  # Extra amplification for Treble band
-MAX_AMP = 32.0  # Even more amplification for the last level (Treble)
+MAX_AMP = 20.0  # Even more amplification for the last level (Treble)
 
 # Smooth previous values
 prev_levels = np.zeros(5)
