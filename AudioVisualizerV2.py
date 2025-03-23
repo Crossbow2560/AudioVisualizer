@@ -13,8 +13,8 @@ SERIAL_PORT = "COM8"  # Check if correct
 BAUD_RATE = 115200
 
 # 🎨 Frequency Bands (Hz) - Bass, Low-Mid, Mid, High-Mid, Treble
-FREQ_BANDS = [(60, 120), (170, 400), (500, 1000), (1500, 2200), (3000, 6000)]
-
+#FREQ_BANDS = [(60, 120), (170, 400), (500, 1000), (1500, 2200), (3000, 6000)]
+FREQ_BANDS = [(60, 150), (250, 500), (800, 1200), (2000, 3000), (6000, 10000)]
 # Amplification Factors
 LOW_AMP = 4.0  # For first three bands (Bass, Low-Mid, Mid)
 HIGH_AMP = 8.0  # For High-Mid band
@@ -90,6 +90,6 @@ with sd.InputStream(callback=process_audio, samplerate=SAMPLERATE, channels=2, b
     print("🎶 Streaming... Press Ctrl+C to stop.")
     try:
         while True:
-            time.sleep(0.05)  # Faster updates for better responsiveness
+            time.sleep(0.08)  # Faster updates for better responsiveness
     except KeyboardInterrupt:
         print("🛑 Stopping...")
