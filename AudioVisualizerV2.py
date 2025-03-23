@@ -14,9 +14,9 @@ BAUD_RATE = 115200
 
 # 🎨 Frequency Bands (Hz) - Bass, Low-Mid, Mid, High-Mid, Treble
 #FREQ_BANDS = [(60, 120), (170, 400), (500, 1000), (1500, 2200), (3000, 6000)]
-FREQ_BANDS = [(60, 150), (250, 500), (800, 1200), (2000, 3000), (6000, 10000)]
+FREQ_BANDS = [(60, 150), (250, 500), (550, 1700), (2000, 3000), (6000, 10000)]
 # Amplification Factors
-LOW_AMP = 2.0  # For first three bands (Bass, Low-Mid, Mid)
+LOW_AMP = 2.5  # For first three bands (Bass, Low-Mid, Mid)
 HIGH_AMP = 8.0  # For High-Mid band
 EXTRA_HIGH_AMP = 12.0  # Extra amplification for Treble band
 MAX_AMP = 20.0  # Even more amplification for the last level (Treble)
