@@ -6,20 +6,25 @@ import time
 # 🎵 Audio settings
 SAMPLERATE = 44100
 CHUNK_SIZE = 512
-DEVICE = 14  # Change this to your correct microphone index
-
+DEVICE = 7  # Change this to your correct microphone index
+# DEVICE = 14
 # 🔌 Serial settings
 SERIAL_PORT = "COM8"  # Check if correct
 BAUD_RATE = 115200
 
 # 🎨 Frequency Bands (Hz) - Bass, Low-Mid, Mid, High-Mid, Treble
-#FREQ_BANDS = [(60, 120), (170, 400), (500, 1000), (1500, 2200), (3000, 6000)]
-FREQ_BANDS = [(60, 150), (250, 500), (550, 1700), (2000, 3000), (6000, 10000)]
+FREQ_BANDS = [(60, 120), (170, 400), (500, 1000), (1500, 2200), (3000, 6000)]
+# FREQ_BANDS = [(60, 150), (250, 500), (550, 1700), (2000, 3000), (6000, 10000)]
 # Amplification Factors
-LOW_AMP = 2.5  # For first three bands (Bass, Low-Mid, Mid)
-HIGH_AMP = 8.0  # For High-Mid band
-EXTRA_HIGH_AMP = 12.0  # Extra amplification for Treble band
-MAX_AMP = 20.0  # Even more amplification for the last level (Treble)
+# LOW_AMP = 1  # For first three bands (Bass, Low-Mid, Mid)
+# HIGH_AMP = 8.0  # For High-Mid band
+# EXTRA_HIGH_AMP = 12.0  # Extra amplification for Treble band
+# MAX_AMP = 20.0  # Even more amplification for the last level (Treble)
+
+LOW_AMP = 1  # For first three bands (Bass, Low-Mid, Mid)
+HIGH_AMP = 25.0  # For High-Mid band
+EXTRA_HIGH_AMP = 0.1  # Extra amplification for Treble band
+MAX_AMP = 4.0  # Even more amplification for the last level (Treble)
 
 # Smooth previous values
 prev_levels = np.zeros(5)
@@ -90,6 +95,6 @@ with sd.InputStream(callback=process_audio, samplerate=SAMPLERATE, channels=2, b
     print("🎶 Streaming... Press Ctrl+C to stop.")
     try:
         while True:
-            time.sleep(0.08)  # Faster updates for better responsiveness
+            time.sleep(0.1)  # Faster updates for better responsiveness
     except KeyboardInterrupt:
         print("🛑 Stopping...")
