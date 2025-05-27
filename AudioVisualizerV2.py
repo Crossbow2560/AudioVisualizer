@@ -7,7 +7,7 @@ import time
 SAMPLERATE = 44100
 CHUNK_SIZE = 512
 DEVICE = 7  # Change this to your correct microphone index
-# DEVICE = 14
+# DEVICE =
 # 🔌 Serial settings
 SERIAL_PORT = "COM8"  # Check if correct
 BAUD_RATE = 115200
