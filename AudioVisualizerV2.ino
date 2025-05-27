@@ -52,4 +52,7 @@ void loop() {
 
     FastLED.show();
     delay(30);  // Controls animation speed
+    if(Serial.available() == 0){
+      Serial.flush();
+    }
 }
