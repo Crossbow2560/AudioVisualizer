@@ -13,7 +13,6 @@ float targetLevels[NUM_BARS] = {0};
 float phases[NUM_BARS] = {0, 1, 2, 3, 4};
 float speeds[NUM_BARS] = {0.031, 0.027, 0.037, 0.042, 0.033};
 
-// New: Maximum height for each bar, randomized
 int maxHeights[NUM_BARS] = {5, 5, 5, 5, 5};
 unsigned long lastMaxHeightUpdate = 0;
 const unsigned long maxHeightUpdateInterval = 900; // ms
@@ -26,7 +25,6 @@ void setup() {
 }
 
 void loop() {
-  // Randomize the max height for each bar every so often
   if (millis() - lastMaxHeightUpdate > maxHeightUpdateInterval) {
     lastMaxHeightUpdate = millis();
     for (int i = 0; i < NUM_BARS; i++) {
