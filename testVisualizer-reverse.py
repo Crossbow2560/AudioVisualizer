@@ -84,7 +84,7 @@ def main():
                 led_strip.set_pixel(led_index, (r, g, b))
 
         led_strip.show()
-        time.sleep(0.02)
+        time.sleep(0)
 
 if __name__ == "__main__":
     main()
